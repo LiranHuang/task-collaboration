@@ -102,12 +102,31 @@ postconditions and irreversibility evidence; return PASS, FAIL or BLOCKED.
 
 ## Context and retirement
 
-A new result-level subgoal defaults to a new child. Reuse only for continuation
-of the same objective, module, semantic owner, write scope and acceptance;
-a change to any requires a new child. Never recycle a terminal context as a
-general worker. On completion, failure, cancellation or replacement, stop active
-work and release the agent slot using supported runtime controls. Do not invent
-a close tool or claim deletion when only interruption is available.
-Before release, return unresolved work and artifacts to a named owner.
+Prefer reuse for continuous work; prefer isolation for independent work.
+Continue with the same child for implementation, test fixes, omissions and
+integration feedback serving the same result while its context remains useful.
+A new subgoal label, adjacent file, refined acceptance detail or revised write
+boundary alone does not require a new child: update the bounded package and
+confirm authority, baseline and ownership before further writes.
+
+Start a new child for an independent objective, unrelated module/owner, stale
+or mixed context, incompatible permissions/model requirements, or required
+independent verification. Similar task type alone does not justify reuse.
+Use isolated context for new independent children; continuing an existing child
+does not require respawning it or changing its history mode.
+
+A package-level DONE or recoverable failure is not the end of a work chain.
+Retain the child only for concrete pending correction, integration feedback or
+an identified dependent continuation. Release it when the chain is adopted with
+no pending continuation, cancelled, abandoned, replaced or irrecoverably failed;
+return residual work and artifacts to a named owner first. Never retain it as
+an indefinite standby or recycle a closed chain as a general worker. Use the
+runtime's supported stop/release controls; do not invent a close tool or claim
+deletion when only interruption is available. A single-use independent
+irreversible-action precheck retains its original no-repeat boundary.
+
+Reuse reduces repeated investigation and handoff; it does not guarantee cache
+hits. Keep stable inputs consistent, send concise deltas and judge total task
+cost, latency and rework rather than cache-hit rate alone.
 Agent retirement does not clean files: the engineering lifecycle still governs
 immediate last-use cleanup, unique-work preservation and worktree disposition.

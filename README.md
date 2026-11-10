@@ -3,7 +3,8 @@
 An independent agent skill for bounded delegation, role and model routing,
 fallback, dependency-aware parallel work, context isolation, handoff, and agent
 retirement. Use it before delegation or when receiving an agent handoff;
-ordinary solo tasks skip it.
+ordinary solo tasks skip it. Reuse agents for continuous work, isolate independent
+work, and retire agents when their work chain ends.
 
 The parent owns user intent, integration, progress, and final acceptance.
 Engineering execution, Git, worktrees, artifact lifecycle, and runtime adoption
