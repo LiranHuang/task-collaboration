@@ -7,8 +7,10 @@ ordinary solo tasks skip it.
 
 The parent owns user intent, integration, progress, and final acceptance.
 Engineering execution, Git, worktrees, artifact lifecycle, and runtime adoption
-belong to the separate `agent-engineering-mindset` skill. This package does not
-bundle or replace that skill, runtime tools, or project permissions.
+follow the host project's engineering rules (optionally supplied by a skill such
+as `agent-engineering-mindset`). This package has no mandatory companion skill
+and does not replace runtime tools or project permissions. Role names are generic
+responsibilities; model routes are configurable examples, not required providers.
 
 ## Installation
 
