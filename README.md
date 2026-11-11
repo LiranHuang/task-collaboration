@@ -2,7 +2,8 @@
 
 An independent agent skill for bounded delegation, role and model routing,
 fallback, dependency-aware parallel work, context isolation, handoff, and agent
-retirement. Use it before delegation or when receiving an agent handoff;
+retirement. Use it to assess delegation for independent work packages or a
+separately investigable blocker, and when receiving an agent handoff;
 ordinary solo tasks skip it. Reuse agents for continuous work, isolate independent
 work, and retire agents when their work chain ends.
 

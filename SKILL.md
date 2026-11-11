@@ -1,6 +1,6 @@
 ---
 name: task-collaboration
-description: Coordinate delegated work through task packages, role/model routing, dependency-aware parallelism, isolated context, handoff, and agent retirement. Use before delegation or when receiving an agent handoff; not for ordinary solo work.
+description: Decide whether to delegate when a task has independently actionable work packages or a blocker that separate investigation can resolve. Then coordinate task packages, role/model routing, parallelism, context, handoff and retirement. Also use for agent handoffs; skip simple solo tasks.
 ---
 
 # Task Collaboration
@@ -11,13 +11,21 @@ manages execution, without a second standing manager or parallel progress card.
 Follow the host project's engineering rules for goals, worktrees, Git, artifact
 lifecycle, runtime adoption, acceptance, coding and repair. No separately named
 skill is required by this package. Children need this
-skill only for receiving a handoff or delegating further, not merely for execution.
+skill when evaluating their own delegation or receiving a handoff, not merely for execution.
 
 ## Decide and route
 
-Delegate bounded independent work when parallel execution or focused context
-materially improves speed or quality beyond handoff and review cost. Keep small
-work direct. Parallelize ready packages with stable inputs, disjoint write owners,
+Load this skill while deciding whether to delegate, before committing to a
+solo plan, when at least two work packages have independent inputs/owners or a
+separate investigation can advance while the parent handles a blocker. A user
+need not mention agents or parallelism. Complexity or file count alone is not a
+trigger; a simple bounded edit or wholly dependent sequence stays direct.
+
+Compare useful concurrent work or focused analysis against handoff and review
+cost. Choose direct work, continued use of an active child, or a new independent
+child; loading this skill does not mandate spawning. Reuse the loaded contract
+within the work chain and reassess only when dependencies, ownership or scope
+materially change; no per-turn reread or separate decision checklist is required. Parallelize ready packages with stable inputs, disjoint write owners,
 and independently integrable outputs. Serialize dependencies, shared owners,
 unresolved interfaces, and cutovers. Never require a planner-executor-reviewer
 pipeline, use every model, or create a worktree merely because a child exists.
