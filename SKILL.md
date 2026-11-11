@@ -17,7 +17,7 @@ skill when evaluating their own delegation or receiving a handoff, not merely fo
 
 Load this skill while deciding whether to delegate, before committing to a
 solo plan, when at least two work packages have independent inputs/owners or a
-separate investigation can advance while the parent handles a blocker. A user
+bounded read-only investigation can advance alongside implementation or a blocker. A user
 need not mention agents or parallelism. Complexity or file count alone is not a
 trigger; a simple bounded edit or wholly dependent sequence stays direct.
 
@@ -25,10 +25,24 @@ Compare useful concurrent work or focused analysis against handoff and review
 cost. Choose direct work, continued use of an active child, or a new independent
 child; loading this skill does not mandate spawning. Reuse the loaded contract
 within the work chain and reassess only when dependencies, ownership or scope
-materially change; no per-turn reread or separate decision checklist is required. Parallelize ready packages with stable inputs, disjoint write owners,
-and independently integrable outputs. Serialize dependencies, shared owners,
-unresolved interfaces, and cutovers. Never require a planner-executor-reviewer
+materially change; no per-turn reread or separate decision checklist is required.
+Parallelize ready packages with stable inputs, disjoint write owners and
+independently integrable outputs. Serialize dependent steps, overlapping writes,
+unresolved interfaces and cutovers. Never require a planner-executor-reviewer
 pipeline, use every model, or create a worktree merely because a child exists.
+
+A read-only analysis package is a delegation candidate when its inputs are
+fixed, its question is bounded and its evidence can be checked independently:
+for example consumer contracts, source facts/numeric units, or failure boundaries.
+It need not own a separate writable module. A shared final deliverable or one
+code writer does not make all upstream investigations serial. Bind concurrent
+analysis to a revision or stable snapshot; do not infer consistency from files
+being edited. Delegate only when the expected benefit exceeds handoff/review cost;
+deterministic replay belongs in scripts/background jobs, not one agent per item.
+
+When this assessment selects direct execution, state one brief concrete reason,
+such as a real dependency or disproportionate handoff cost. Explain at the
+decision point, not every turn; no extra checklist or mandatory parallelism.
 
 Roles below are responsibilities, not required agent names. Map them to the
 host's available roles. The model routes are configurable examples; use a host
