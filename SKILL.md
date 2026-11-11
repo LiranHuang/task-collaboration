@@ -41,6 +41,7 @@ complexity, required tools and context. No specific vendor subscription is requi
 | Ambiguous architecture and multi-constraint planning | analyst/planner, read-only | gpt-6-astra/high | gpt-6.1-sol/high; gpt-6.1-terra/high |
 | Bounded investigation and local decomposition | analyst, read-only | gpt-6.1-sol/medium | gpt-6.1-terra/medium; gpt-6-sol/high |
 | Ordinary implementation or repair | executor | gpt-6.1-terra/medium | gpt-6.1-sol/medium; gpt-5.6-terra/high |
+| Low-difficulty long-running work with stable inputs and clear steps | executor | gpt-6.1-terra/medium preferred when available | Ordinary executor fallbacks |
 | Cross-module, concurrency, migration, security, integrity, recovery | executor | gpt-6.1-terra/high | gpt-6.1-sol/high; gpt-5.6-terra/high |
 | Final irreversible-action precheck, only when host engineering rules trigger it | independent verifier, read-only | gpt-6.1-terra/high | No automatic substitution or second audit |
 
@@ -52,6 +53,15 @@ model/effort and disallows overrides. Report actual selection; changed
 defaults do not change running agents. Other runtimes use their native tools,
 tracking and available model controls, without inventing Codex arguments or
 changing providers. Escalate effort for concrete uncertainty, not routinely.
+
+Prefer gpt-6.1-terra/medium for low-difficulty long tasks; use an available
+equivalent if the host lacks it. Duration, data volume, chunk count and repetition
+alone never justify a stronger model or higher reasoning effort, even when the
+task is called a migration. Upgrade only for concrete ambiguity, semantic or
+safety risk that requires deeper reasoning. Run deterministic repetitive work
+through scripts or background jobs rather than model calls per item/chunk.
+Keep progress/checkpoints and stop conditions observable; the parent handles
+exceptions and adoption, using existing host supervision without busy polling.
 
 ## Bounded fallback
 
